@@ -19,31 +19,31 @@ Instance crashes    → Detected in 20s → Auto-start triggered  → Email sent
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                React Frontend (Vite + TS)                │
-│                   http://localhost:5173                  │
-│                                                          │
+│                React Frontend (Vite + TS)               │
+│                   http://localhost:5173                 │
+│                                                         │
 │  MetricCards  EC2Panel  CPUChart  Alarms  RecoveryLog   │
 └──────────────────────┬──────────────────────────────────┘
                        │ HTTP polling (every 30s)
                        ▼
 ┌─────────────────────────────────────────────────────────┐
-│              Flask API Server (app.py)                   │
-│                  http://localhost:5000                   │
-│                                                          │
+│              Flask API Server (app.py)                  │
+│                  http://localhost:5000                  │
+│                                                         │
 │  /api/instances   /api/summary    /api/alarms           │
 │  /api/recovery    /api/cpu-metrics /api/heal            │
 │  /api/scaling     /api/sns/setup  /api/sns/test         │
-│                                                          │
+│                                                         │
 │  Background Thread: polls EC2 every 20s                 │
-│  → detects state changes                                 │
+│  → detects state changes                                │
 │  → triggers reboot on high CPU                          │
 │  → sends SNS email alerts                               │
 └──────────────────────┬──────────────────────────────────┘
                        │ boto3 (AWS SDK)
                        ▼
 ┌─────────────────────────────────────────────────────────┐
-│                    AWS (us-west-1)                       │
-│                                                          │
+│                    AWS (us-west-1)                      │
+│                                                         │
 │  EC2 Instances        CloudWatch Alarms                 │
 │  Auto Scaling Group   SNS Topic + Email Subscriptions   │
 │  IAM Roles            Lambda Function (optional)        │
@@ -300,7 +300,3 @@ npm run test
 ```
 
 ---
-
-## 📄 License
-
-MIT
