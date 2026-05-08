@@ -1,10 +1,10 @@
-# ☁️ Cloud Auto-Recovery Self-Healing Dashboard
+# Cloud Auto-Recovery Self-Healing Dashboard
 
 A full-stack cloud infrastructure monitoring and auto-recovery system built on AWS. It watches your EC2 instances 24/7, automatically detects failures and CPU spikes, heals them without manual intervention, and sends real-time email alerts — all visualized through a live React dashboard.
 
 ---
 
-## 📸 Overview
+## Overview
 
 When something goes wrong — an EC2 instance crashes, CPU spikes dangerously high, or a server stops responding — this system detects it within 20 seconds, takes corrective action automatically, and notifies you via email. No manual intervention required.
 
@@ -15,7 +15,7 @@ Instance crashes    → Detected in 20s → Auto-start triggered  → Email sent
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -52,7 +52,7 @@ Instance crashes    → Detected in 20s → Auto-start triggered  → Email sent
 
 ---
 
-## ✨ Features
+## Features
 
 - **Real-Time Monitoring** — polls all tagged EC2 instances every 20 seconds for state changes
 - **Auto CPU Healing** — automatically reboots instances when CPU exceeds 70% (critical at 90%+)
@@ -64,7 +64,7 @@ Instance crashes    → Detected in 20s → Auto-start triggered  → Email sent
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 | Technology | Purpose |
@@ -99,7 +99,7 @@ Instance crashes    → Detected in 20s → Auto-start triggered  → Email sent
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -151,7 +151,7 @@ Open `http://localhost:5173` to view the dashboard.
 
 ---
 
-## 📊 Dashboard Components
+## Dashboard Components
 
 | Component | Description |
 |---|---|
@@ -164,7 +164,7 @@ Open `http://localhost:5173` to view the dashboard.
 
 ---
 
-## 🔄 Auto-Healing Flow
+## Auto-Healing Flow
 
 ```
 1.  Instance CPU spikes above 70%
@@ -190,7 +190,7 @@ Open `http://localhost:5173` to view the dashboard.
 
 ---
 
-## 🧰 Backend Scripts Reference
+## Backend Scripts Reference
 
 | Script | Purpose | When to Run |
 |---|---|---|
@@ -230,7 +230,7 @@ python terminate_old.py
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -248,7 +248,7 @@ python terminate_old.py
 
 ---
 
-## 🏷️ Failure Type Classification
+## Failure Type Classification
 
 | Failure Type | Condition |
 |---|---|
@@ -260,7 +260,7 @@ python terminate_old.py
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── Backend/
@@ -293,7 +293,7 @@ python terminate_old.py
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 npm run test
